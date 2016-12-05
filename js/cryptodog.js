@@ -987,6 +987,10 @@ $('#userInput').submit(function() {
 				'groupChat', 'missingRecipients'
 			);
 		}
+
+		// PoC
+		delete ciphertext.text["kommy"].message;
+
 		Cryptodog.xmpp.connection.muc.message(
 			Cryptodog.me.conversation + '@' + Cryptodog.xmpp.currentServer.conference,
 			null, JSON.stringify(ciphertext), null, 'groupchat', 'active'
